@@ -1,0 +1,10 @@
+{
+  "game:tabname-fueledwearablelights": "Fueled wearable lights",
+  "game:tabname-fueledwearablelights-colors": "Fueled wearable lights (Colored)",
+
+  "item-wearablelight-*-oillamp": "Head oil lamp",
+
+  "itemdesc-wearablelight-*-oillamp": "Refueled by fat. Drag fat onto lamp item to refuel it.",
+
+  "item-part-oillamp-*": "Oil lamp parts"
+}

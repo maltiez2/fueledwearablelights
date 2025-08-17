@@ -1,0 +1,29 @@
+﻿{
+  "code": "wearablelight",
+  "class": "CombatOverhaul:WearableFueledLightSource",
+  "variantgroups": [{"code": "category", "states": ["head"]}, {"code": "subtype", "states": ["plain"]}, {"code": "type", "states": ["oillamp"]}],
+  "shape": {"base": "wearablelight-{category}-{subtype}-{type}"},
+  "texturesByType": {"*": {"seraph": {"base": "game:block/transparent"}}},
+  "storageFlags": 128,
+  "behaviors": [],
+  "attributes": {
+    "wearableAttachment": true,
+    "clothescategory": "head",
+    "warmthByType": {"*": 0},
+    "NeedsFuel": true,
+    "FuelCapacityHours": 16,
+    "FuelEfficiency": 1,
+    "FuelAttribute": "oilLampFuel",
+    "ConsumeFuelWhileSleeping": false,
+    "ToggleAttribute": "turnedOn",
+    "LightHsv": [9, 6, 4],
+    "TurnedOffLightHsv": [0, 0, 0],
+    "FuelItems": {"game:fat": 16},
+    "MaxFuelWasteFraction": 0.5
+  },
+  "creativeinventory": {"general": ["*"], "fueledwearablelights": ["*"]},
+  "renderAlphaTest": 0.25,
+  "tpHandTransform": {"translation": {"x": -0.78, "y": -0.93, "z": -1.23}, "rotation": {"x": 35, "y": -90, "z": 49}, "scale": 0.67},
+  "guiTransform": {"translation": {"x": 0, "y": 0, "z": 0}, "rotation": {"x": 172, "y": -72, "z": 13}, "origin": {"x": 0.7, "y": 1.75, "z": 0.59}, "scale": 3.05},
+  "groundTransform": {"translation": {"x": 0, "y": 0, "z": 0}, "rotation": {"x": 0, "y": 0, "z": 0}, "origin": {"x": 0.5, "y": 1.8, "z": 0.5}, "scale": 4.55}
+}

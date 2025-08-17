@@ -1,0 +1,15 @@
+[
+	{
+		"enabled": true,
+		"ingredientPattern": "LNL",
+		"recipeGroup": 1,
+		"ingredients": {
+			"N": {"type": "item", "code": "part-oillamp-brass", "quantity": 1},
+			"L": { "type": "item", "code": "game:leather-normal-plain" }
+		},
+		"width": 3,
+		"height": 1,
+		"name": "head-oil-lamp",
+		"output": { "type": "item", "code": "wearablelight-head-plain-oillamp" }
+	}
+]
