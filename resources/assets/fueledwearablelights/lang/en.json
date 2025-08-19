@@ -3,8 +3,10 @@
   "game:tabname-fueledwearablelights-colors": "Fueled wearable lights (Colored)",
 
   "item-wearablelight-*-oillamp": "Head oil lamp",
+  "item-wearablelight-*-lantern": "Wearable pole lantern",
 
   "itemdesc-wearablelight-*-oillamp": "Refueled by fat. Drag fat onto lamp item to refuel it.",
+  "itemdesc-wearablelight-*-lantern": "Refueled by cabndles. Drag a candle onto lantern item to refuel it.",
 
   "item-part-oillamp-*": "Oil lamp parts"
 }
