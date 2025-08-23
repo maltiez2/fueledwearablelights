@@ -1,0 +1,56 @@
+[
+  {
+		"enabled": true,
+		"ingredientPattern": "LNL",
+		"recipeGroup": 1,
+		"ingredients": {
+			"N": {"type": "item", "code": "part-oillamp-brass", "quantity": 1 },
+			"L": { "type": "item", "code": "game:leather-normal-plain" }
+		},
+		"width": 3,
+		"height": 1,
+		"name": "head-oil-lamp",
+		"output": { "type": "item", "code": "wearablelight-head-plain-oillamp" }
+	},
+	{
+		"enabled": true,
+		"ingredientPattern": "LNL",
+		"recipeGroup": 2,
+		"ingredients": {
+			"N": {"type": "item", "code": "part-oillamp-{metal}", "quantity": 1 },
+			"L": { "type": "item", "code": "game:leather-normal-{leather}" }
+		},
+		"width": 3,
+		"height": 1,
+		"name": "head-oil-lamp",
+		"output": { "type": "item", "code": "wearablelight-head-plain-oillamp", "attributes": {"types": {"leather": "{leather}", "metal": "{metal}"}} }
+	},
+	{
+		"enabled": true,
+		"ingredientPattern": "LNL,_P_",
+		"recipeGroup": 2,
+		"ingredients": {
+			"N": {"type": "item", "code": "part-oillamp-{metal}", "quantity": 1 },
+			"L": { "type": "item", "code": "game:leather-normal-{leather}" },
+			"P": { "type": "item", "code": "game:metalplate-silver" }
+		},
+		"width": 3,
+		"height": 2,
+		"name": "head-oil-lamp",
+		"output": { "type": "item", "code": "wearablelight-head-plain-oillamp", "attributes": {"types": {"leather": "{leather}", "metal": "{metal}", "lining": "silver"}} }
+	},
+	{
+		"enabled": true,
+		"ingredientPattern": "LNL,_P_",
+		"recipeGroup": 2,
+		"ingredients": {
+			"N": {"type": "item", "code": "part-oillamp-{metal}", "quantity": 1 },
+			"L": { "type": "item", "code": "game:leather-normal-{leather}" },
+			"P": { "type": "item", "code": "game:metalplate-gold" }
+		},
+		"width": 3,
+		"height": 2,
+		"name": "head-oil-lamp",
+		"output": { "type": "item", "code": "wearablelight-head-plain-oillamp", "attributes": {"types": {"leather": "{leather}", "metal": "{metal}", "lining": "gold"}} }
+	}
+]

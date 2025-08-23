@@ -5,7 +5,66 @@
   "shape": {"base": "wearablelight-{category}-{subtype}-{type}-off"},
   "texturesByType": {"*": {"seraph": {"base": "game:block/transparent"}}},
   "storageFlags": 128,
-  "behaviors": [],
+  "behaviors": [
+    {
+      "name": "FueledWearableLights:ShapeTexturesFromAttributes",
+      "properties": {
+        "shape": {
+          "state-*": {"base": "fueledwearablelights:wearablelight-{category}-{subtype}-{type}-{state}"},
+          "*": {"base": "fueledwearablelights:wearablelight-{category}-{subtype}-{type}-off"}
+        },
+        "description": {
+          "leather-*::metal-*::lining-*": [
+            "game:waypoint-color",
+            ": ",
+            "fueledwearablelights:color-{leather}",
+            "<br>",
+            "game:blockmaterial-Metal",
+            ": ",
+            "game:material-{metal}",
+            "<br>",
+            "fueledwearablelights:lining",
+            ": ",
+            "game:material-{lining}",
+            "<br>"
+          ],
+          "leather-*::metal-*": [
+            "game:waypoint-color",
+            ": ",
+            "fueledwearablelights:color-{leather}",
+            "<br>",
+            "game:blockmaterial-Metal",
+            ": ",
+            "game:material-{metal}",
+            "<br>",
+            "fueledwearablelights:lining",
+            ": ",
+            "-",
+            "<br>"
+          ],
+          "*": ["game:waypoint-color", ": ", "-", "<br>", "game:blockmaterial-Metal", ": ", "game:material-brass", "<br>", "fueledwearablelights:lining", ": ", "-"]
+        },
+        "textures": {
+          "leather-*::metal-*::lining-*": {
+            "wearablelight-head-plain-oillamp-leather": {"base": "game:block/leather/{leather}"},
+            "wearablelight-head-plain-oillamp-metal": {"base": "game:block/metal/plate/{metal}"},
+            "wearablelight-head-plain-oillamp-lining": {"base": "game:block/metal/plate/{lining}"}
+          },
+          "leather-*::metal-*": {
+            "wearablelight-head-plain-oillamp-leather": {"base": "game:block/leather/{leather}"},
+            "wearablelight-head-plain-oillamp-metal": {"base": "game:block/metal/plate/{metal}"},
+            "wearablelight-head-plain-oillamp-lining": {"base": "game:block/metal/plate/{metal}"}
+          },
+          "leather-*": {"wearablelight-head-plain-oillamp-leather": {"base": "game:block/leather/{leather}"}},
+          "metal-*": {
+            "wearablelight-head-plain-oillamp-metal": {"base": "game:block/metal/plate/{metal}"},
+            "wearablelight-head-plain-oillamp-lining": {"base": "game:block/metal/plate/{metal}"}
+          },
+          "lining-*": {"wearablelight-head-plain-oillamp-lining": {"base": "game:block/metal/plate/{lining}"}}
+        }
+      }
+    }
+  ],
   "attributes": {
     "wearableAttachment": true,
     "clothescategory": "head",
@@ -15,17 +74,56 @@
     "FuelEfficiency": 1,
     "FuelAttribute": "oilLampFuel",
     "ConsumeFuelWhileSleeping": false,
-    "ToggleAttribute": "turnedOn",
+    "ToggleAttribute": "state",
     "LightHsv": [9, 6, 4],
     "TurnedOffLightHsv": [0, 0, 0],
     "FuelItems": {"game:fat": 8, "game:fat-cut": 2},
     "MaxFuelWasteFraction": 0.5,
-    "shapes": {
-      "turnedOnStr-*": {"base": "fueledwearablelights:wearablelight-{category}-{subtype}-{type}-{turnedOnStr}"},
-      "*": {"base": "fueledwearablelights:wearablelight-{category}-{subtype}-{type}-off"}
-    }
+    "LightHsvByVariant": {"silver": [9, 6, 6], "gold": [9, 6, 8]},
+    "LightHsvVariantCode": "lining"
   },
   "creativeinventory": {"general": ["*"], "fueledwearablelights": ["*"]},
+  "creativeinventoryStacks": [
+    {
+      "tabs": ["general", "fueledwearablelights-colors"],
+      "stacks": [
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}"},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "plain", "metal": "brass"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "plain", "metal": "brass", "lining": "silver"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "plain", "metal": "brass", "lining": "gold"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "orange", "metal": "brass"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "orange", "metal": "brass", "lining": "silver"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "orange", "metal": "brass", "lining": "gold"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "black", "metal": "brass"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "black", "metal": "brass", "lining": "silver"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "black", "metal": "brass", "lining": "gold"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "red", "metal": "brass"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "red", "metal": "brass", "lining": "silver"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "red", "metal": "brass", "lining": "gold"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "blue", "metal": "brass"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "blue", "metal": "brass", "lining": "silver"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "blue", "metal": "brass", "lining": "gold"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "purple", "metal": "brass"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "purple", "metal": "brass", "lining": "silver"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "purple", "metal": "brass", "lining": "gold"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "pink", "metal": "brass"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "pink", "metal": "brass", "lining": "silver"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "pink", "metal": "brass", "lining": "gold"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "white", "metal": "brass"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "white", "metal": "brass", "lining": "silver"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "white", "metal": "brass", "lining": "gold"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "yellow", "metal": "brass"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "yellow", "metal": "brass", "lining": "silver"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "yellow", "metal": "brass", "lining": "gold"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "gray", "metal": "brass"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "gray", "metal": "brass", "lining": "silver"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "gray", "metal": "brass", "lining": "gold"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "green", "metal": "brass"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "green", "metal": "brass", "lining": "silver"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "green", "metal": "brass", "lining": "gold"}}}
+      ]
+    }
+  ],
   "renderAlphaTest": 0.25,
   "tpHandTransform": {"translation": {"x": 0.1, "y": -0.35, "z": 0.25}, "rotation": {"x": 0, "y": 90, "z": 90}, "origin": {"x": 0, "y": 0, "z": 0}, "scale": 1},
   "guiTransform": {"translation": {"x": 0, "y": 0, "z": 0}, "rotation": {"x": 172, "y": -72, "z": 13}, "origin": {"x": 0.2, "y": 0.25, "z": 0.19}, "scale": 3.05},

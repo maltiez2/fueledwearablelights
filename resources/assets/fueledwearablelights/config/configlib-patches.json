@@ -2,7 +2,7 @@
   "version": 0,
   "patches": {
     "string": {
-
+      
     },
     "other":  {
 
@@ -11,12 +11,125 @@
 
     },
     "number": {
-
+      "fueledwearablelights:itemtypes/oillamp.jspn": {
+        "attributes/FuelCapacityHours": "oillamp_fuel_capacity",
+        "attributes/FuelEfficiency": "oillamp_fuel_efficiency",
+        "attributes/LightHsv/2": "oillamp_light_output",
+        "attributes/LightHsvByVariant/silver/2": "oillamp_light_output + oillamp_silver_lining_bonus",
+        "attributes/LightHsvByVariant/gold/2": "oillamp_light_output + oillamp_gold_lining_bonus"
+      },
+      "fueledwearablelights:itemtypes/lantern.jspn": {
+        "attributes/FuelCapacityHours": "lantern_fuel_capacity",
+        "attributes/FuelEfficiency": "lantern_fuel_efficiency",
+        "attributes/LightHsv/2": "lantern_light_output",
+        "attributes/LightHsvByVariant/silver/2": "lantern_light_output + lantern_silver_lining_bonus",
+        "attributes/LightHsvByVariant/gold/2": "lantern_light_output + lantern_gold_lining_bonus"
+      }
     }
   },
   "constants": {
 
   },
   "settings": [
+    {
+      "type": "separator",
+      "title": "setting-title-oillamp"
+    },
+    {
+      "code": "oillamp_fuel_capacity",
+      "type": "float",
+      "ingui": "setting-oillamp_fuel_capacity",
+      "default": 8
+    },
+    {
+      "code": "oillamp_fuel_efficiency",
+      "type": "float",
+      "ingui": "setting-oillamp_fuel_efficiency",
+      "default": 1.0,
+      "range": {
+        "min": 0.0,
+        "max": 4.0
+      }
+    },
+    {
+      "code": "oillamp_light_output",
+      "type": "integer",
+      "ingui": "setting-oillamp_light_output",
+      "default": 4,
+      "range": {
+        "min": 1,
+        "max": 32
+      }
+    },
+    {
+      "code": "oillamp_silver_lining_bonus",
+      "type": "integer",
+      "ingui": "setting-oillamp_silver_lining_bonus",
+      "default": 2,
+      "range": {
+        "min": 1,
+        "max": 32
+      }
+    },
+    {
+      "code": "oillamp_gold_lining_bonus",
+      "type": "integer",
+      "ingui": "setting-oillamp_gold_lining_bonus",
+      "default": 4,
+      "range": {
+        "min": 1,
+        "max": 32
+      }
+    },
+    {
+      "type": "separator",
+      "title": "setting-title-lantern"
+    },
+    {
+      "code": "lantern_fuel_capacity",
+      "type": "float",
+      "ingui": "setting-lantern_fuel_capacity",
+      "default": 16
+    },
+    {
+      "code": "lantern_fuel_efficiency",
+      "type": "float",
+      "ingui": "setting-lantern_fuel_efficiency",
+      "default": 1.0,
+      "range": {
+        "min": 0.0,
+        "max": 4.0
+      }
+    },
+    {
+      "code": "lantern_light_output",
+      "type": "integer",
+      "ingui": "setting-lantern_light_output",
+      "default": 12,
+      "range": {
+        "min": 1,
+        "max": 32
+      }
+    },
+    {
+      "code": "lantern_silver_lining_bonus",
+      "type": "integer",
+      "ingui": "setting-lantern_silver_lining_bonus",
+      "default": 3,
+      "range": {
+        "min": 1,
+        "max": 32
+      }
+    },
+    {
+      "code": "lantern_gold_lining_bonus",
+      "type": "integer",
+      "ingui": "setting-lantern_gold_lining_bonus",
+      "default": 6,
+      "range": {
+        "min": 1,
+        "max": 32
+      }
+    },
   ]
 }

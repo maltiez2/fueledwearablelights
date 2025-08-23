@@ -8,5 +8,33 @@
   "itemdesc-wearablelight-*-oillamp": "Refueled by fat. Drag fat onto lamp item to refuel it.",
   "itemdesc-wearablelight-*-lantern": "Refueled by cabndles. Drag a candle onto lantern item to refuel it.",
 
-  "item-part-oillamp-*": "Oil lamp parts"
+  "item-part-oillamp-*": "Oil lamp parts",
+
+  "color-orange": "Orange",
+  "color-black": "Black",
+  "color-red": "Red",
+  "color-blue": "Blue",
+  "color-purple": "Purple",
+  "color-pink": "Pink",
+  "color-white": "White",
+  "color-yellow": "Yellow",
+  "color-gray": "Gray",
+  "color-green": "Green",
+  "color-*": "-",
+
+  "lining": "Lining",
+
+  "setting-title-oillamp": "Head oil lamp",
+  "setting-title-lantern": "Pole lantern",
+
+  "setting-oillamp_fuel_capacity": "Fuel capacity",
+  "setting-oillamp_fuel_efficiency": "Fuel efficiency",
+  "setting-oillamp_light_output": "Light output",
+  "setting-oillamp_silver_lining_bonus": "Silver lining bonus",
+  "setting-oillamp_gold_lining_bonus": "Gold lining bonus",
+  "setting-lantern_fuel_capacity": "Fuel capacity",
+  "setting-lantern_fuel_efficiency": "Fuel efficiency",
+  "setting-lantern_light_output": "Light output",
+  "setting-lantern_silver_lining_bonus": "Silver lining bonus",
+  "setting-lantern_gold_lining_bonus": "Gold lining bonus"
 }

@@ -12,7 +12,8 @@
 	"textures": {
 		"wearablelight-head-plain-oillamp-linen": "game:block/linen",
 		"wearablelight-head-plain-oillamp-leather": "game:block/leather/plain",
-		"wearablelight-head-plain-oillamp-metal": "game:block/metal/plate/brass"
+		"wearablelight-head-plain-oillamp-metal": "game:block/metal/plate/brass",
+		"wearablelight-head-plain-oillamp-lining": "game:block/metal/plate/brass"
 	},
 	"elements": [
 		{
@@ -153,7 +154,7 @@
 												"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 												"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 												"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-												"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+												"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 14.5, 11.5, 15.5, 12.0 ], "autoUv": false },
 												"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 												"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 											}
@@ -183,7 +184,7 @@
 														"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-														"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+														"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 12.0, 16.0, 12.5 ], "autoUv": false },
 														"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 													}
@@ -215,7 +216,7 @@
 														"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-														"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+														"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 12.5, 16.0, 13.0 ], "autoUv": false },
 														"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 													}
@@ -247,7 +248,7 @@
 														"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-														"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+														"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 13.0, 16.0, 13.5 ], "autoUv": false },
 														"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 													}
@@ -281,7 +282,7 @@
 												"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 												"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 												"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-												"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+												"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 13.5, 16.0, 14.0 ], "autoUv": false },
 												"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 												"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 											}
@@ -311,7 +312,7 @@
 														"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-														"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+														"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 14.0, 16.0, 14.5 ], "autoUv": false },
 														"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 													}
@@ -343,7 +344,7 @@
 														"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-														"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+														"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 14.5, 16.0, 15.0 ], "autoUv": false },
 														"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 													}
@@ -375,7 +376,7 @@
 														"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-														"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+														"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 15.0, 16.0, 15.5 ], "autoUv": false },
 														"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 													}
@@ -409,7 +410,7 @@
 												"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 												"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 												"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-												"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+												"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 15.5, 16.0, 16.0 ], "autoUv": false },
 												"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 												"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 											}
@@ -439,7 +440,7 @@
 														"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-														"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+														"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 8.0, 16.0, 8.5 ], "autoUv": false },
 														"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 													}
@@ -471,7 +472,7 @@
 														"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-														"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+														"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 8.5, 16.0, 9.0 ], "autoUv": false },
 														"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 													}
@@ -503,7 +504,7 @@
 														"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-														"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+														"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 9.0, 16.0, 9.5 ], "autoUv": false },
 														"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 													}
@@ -537,7 +538,7 @@
 												"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 												"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 												"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-												"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+												"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 9.5, 16.0, 10.0 ], "autoUv": false },
 												"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 												"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 											}
@@ -567,7 +568,7 @@
 														"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-														"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+														"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 10.0, 16.0, 10.5 ], "autoUv": false },
 														"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 													}
@@ -599,7 +600,7 @@
 														"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-														"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+														"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 10.5, 16.0, 11.0 ], "autoUv": false },
 														"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 													}
@@ -631,7 +632,7 @@
 														"north": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"east": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"south": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
-														"west": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+														"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 15.0, 11.0, 16.0, 11.5 ], "autoUv": false },
 														"up": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 														"down": { "texture": "#wearablelight-head-plain-oillamp-metal", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
 													}
@@ -639,6 +640,15 @@
 											]
 										}
 									]
+								},
+								{
+									"name": "head_light_43",
+									"from": [ -0.01, 0.5, 0.1 ],
+									"to": [ 0.09, 1.3, 0.9 ],
+									"rotationOrigin": [ 0.2, 0.5, 0.1 ],
+									"faces": {
+										"west": { "texture": "#wearablelight-head-plain-oillamp-lining", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
+									}
 								}
 							]
 						},

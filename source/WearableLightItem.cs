@@ -7,20 +7,25 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
-using Vintagestory.GameContent;
 
 namespace FueledWearableLights;
 
-public class WearableFueledLightSource : ItemShapeTexturesFromAttributes, IWearableLightSource, IFueledItem, ITogglableItem
+public class WearableFueledLightSourceExntendedStats : WearableFueledLightSourceStats
+{
+    public Dictionary<string, byte[]> LightHsvByVariant { get; set; } = [];
+    public string LightHsvVariantCode { get; set; } = "lining";
+}
+
+public class WearableFueledLightSource : Item, IWearableLightSource, IFueledItem, ITogglableItem
 {
     public virtual string HotKeyCode => "toggleWearableLight";
-    public WearableFueledLightSourceStats Stats { get; set; } = new();
+    public WearableFueledLightSourceExntendedStats Stats { get; set; } = new();
 
     public override void OnLoaded(ICoreAPI api)
     {
         base.OnLoaded(api);
 
-        Stats = Attributes.AsObject<WearableFueledLightSourceStats>();
+        Stats = Attributes.AsObject<WearableFueledLightSourceExntendedStats>();
 
         if (MaxStackSize > 1)
         {
@@ -124,7 +129,29 @@ public class WearableFueledLightSource : ItemShapeTexturesFromAttributes, IWeara
         return Math.Max(0.0, slot.Itemstack.Attributes.GetDecimal("fuelHours"));
     }
     public virtual bool ConsumeFuelWhenSleeping(IPlayer player, ItemSlot slot) => Stats.ConsumeFuelWhileSleeping;
-    public virtual byte[] GetLightHsv(EntityPlayer player, ItemSlot slot) => TurnedOn(player.Player, slot) && Stats.NeedsFuel ? Stats.LightHsv : Stats.TurnedOffLightHsv;
+    public virtual byte[] GetLightHsv(EntityPlayer player, ItemSlot slot)
+    {
+        byte[] result = Stats.LightHsv;
+
+        Variants variants = Variants.FromStack(slot.Itemstack);
+        string? variant = variants.Get(Stats.LightHsvVariantCode);
+        if (variant != null && Stats.LightHsvByVariant.ContainsKey(variant))
+        {
+            result = Stats.LightHsvByVariant[variant];
+        }
+
+        if (slot.Itemstack?.Attributes?.HasAttribute("lighthsv") == true)
+        {
+            result = slot.Itemstack.Attributes
+                .GetString("lighthsv")
+                .Split('-')
+                .Select(int.Parse)
+                .Select(i => (byte)i)
+                .ToArray();
+        }
+
+        return TurnedOn(player.Player, slot) && Stats.NeedsFuel ? result : Stats.TurnedOffLightHsv;
+    }
     public virtual float GetStackFuel(ItemStack stack)
     {
         foreach ((string itemWildcard, float fuelAmount) in Stats.FuelItems)
@@ -159,13 +186,27 @@ public class WearableFueledLightSource : ItemShapeTexturesFromAttributes, IWeara
         }
 
         slot?.Itemstack?.Attributes?.SetBool(Stats.ToggleAttribute, true);
-        slot?.Itemstack?.Attributes?.SetString(Stats.ToggleAttribute + "Str", "on");
+
+        if (slot?.Itemstack != null)
+        {
+            Variants variants = Variants.FromStack(slot.Itemstack);
+            variants.Set(Stats.ToggleAttribute, "on");
+            variants.ToStack(slot.Itemstack);
+        }
+
         slot?.MarkDirty();
     }
     public virtual void TurnOff(IPlayer player, ItemSlot slot)
     {
         slot?.Itemstack?.Attributes?.SetBool(Stats.ToggleAttribute, false);
-        slot?.Itemstack?.Attributes?.SetString(Stats.ToggleAttribute + "Str", "off");
+
+        if (slot?.Itemstack != null)
+        {
+            Variants variants = Variants.FromStack(slot.Itemstack);
+            variants.Set(Stats.ToggleAttribute, "off");
+            variants.ToStack(slot.Itemstack);
+        }
+
         slot?.MarkDirty();
     }
     public virtual void Toggle(IPlayer player, ItemSlot slot)

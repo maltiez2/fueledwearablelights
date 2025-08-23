@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <!-- Mod info -->
   <PropertyGroup>
-    <ModName>Fueld Wearable Light</ModName>
+    <ModName>Fueled Wearable Light</ModName>
     <ModType>code</ModType>
-    <ModVersion>0.1.0</ModVersion>
+    <ModVersion>0.2.1</ModVersion>
     <ModId>fueledwearablelights</ModId>
     <Description></Description>
     <Side>universal</Side>
