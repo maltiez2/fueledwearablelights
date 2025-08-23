@@ -1,0 +1,79 @@
+﻿{
+  "code": "wearablelight",
+  "class": "FueledWearableLights:WearableFueledLightSource",
+  "variantgroups": [{"code": "category", "states": ["head"]}, {"code": "subtype", "states": ["plain"]}, {"code": "type", "states": ["clayoillamp"]}],
+  "shape": {"base": "wearablelight-{category}-{subtype}-{type}-rope-off"},
+  "texturesByType": {"*": {"seraph": {"base": "game:block/transparent"}}},
+  "storageFlags": 128,
+  "behaviors": [
+    {
+      "name": "FueledWearableLights:ShapeTexturesFromAttributes",
+      "properties": {
+        "shape": {
+          "state-*": {"base": "fueledwearablelights:wearablelight-{category}-{subtype}-{type}-rope-{state}"},
+          "*": {"base": "fueledwearablelights:wearablelight-{category}-{subtype}-{type}-rope-off"}
+        },
+        "textures": {
+          "clay-*::rope-reedrope": {
+            "wearablelight-head-plain-oillamp-clay": {"base": "game:block/clay/hardened/{clay}"},
+            "wearablelight-head-plain-oillamp-rope": {"base": "game:block/cloth/reedrope"}
+          },
+          "clay-*::rope-linen": {
+            "wearablelight-head-plain-oillamp-clay": {"base": "game:block/clay/hardened/{clay}"},
+            "wearablelight-head-plain-oillamp-rope": {"base": "game:block/linen"}
+          },
+          "clay-*::rope-*": {
+            "wearablelight-head-plain-oillamp-clay": {"base": "game:block/clay/hardened/{clay}"},
+            "wearablelight-head-plain-oillamp-rope": {"base": "game:block/cloth/{rope}"}
+          }
+        }
+      }
+    }
+  ],
+  "attributes": {
+    "wearableAttachment": true,
+    "clothescategory": "head",
+    "warmth": 0,
+    "NeedsFuel": true,
+    "FuelCapacityHours": 12,
+    "FuelEfficiency": 1,
+    "FuelAttribute": "oilLampFuel",
+    "ConsumeFuelWhileSleeping": false,
+    "ToggleAttribute": "state",
+    "LightHsv": [9, 6, 4],
+    "TurnedOffLightHsv": [0, 0, 0],
+    "FuelItems": {"game:fat": 12, "game:fat-cut": 3},
+    "MaxFuelWasteFraction": 0.5
+  },
+  "creativeinventory": {"general": ["*"], "fueledwearablelights": ["*"]},
+  "creativeinventoryStacks": [
+    {
+      "tabs": ["general", "fueledwearablelights-colors"],
+      "stacks": [
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}"},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "blue", "rope": "reedrope"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "fire", "rope": "reedrope"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "black", "rope": "reedrope"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "brown", "rope": "reedrope"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "cream", "rope": "reedrope"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "gray", "rope": "reedrope"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "orange", "rope": "reedrope"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "red", "rope": "reedrope"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "tan", "rope": "reedrope"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "blue", "rope": "linen"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "fire", "rope": "linen"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "black", "rope": "linen"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "brown", "rope": "linen"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "cream", "rope": "linen"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "gray", "rope": "linen"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "orange", "rope": "linen"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "red", "rope": "linen"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"clay": "tan", "rope": "linen"}}}
+      ]
+    }
+  ],
+  "renderAlphaTest": 0.25,
+  "tpHandTransform": {"translation": {"x": 0.1, "y": -0.35, "z": 0.25}, "rotation": {"x": 0, "y": 90, "z": 90}, "origin": {"x": 0, "y": 0, "z": 0}, "scale": 1},
+  "guiTransform": {"translation": {"x": 0, "y": 0, "z": 0}, "rotation": {"x": 172, "y": -72, "z": 13}, "origin": {"x": 0.2, "y": 0.25, "z": 0.19}, "scale": 3.05},
+  "groundTransform": {"translation": {"x": 0, "y": 0, "z": 0}, "rotation": {"x": 90, "y": 0, "z": 0}, "origin": {"x": 0.2, "y": 0.7, "z": 0.3}, "scale": 4.44}
+}

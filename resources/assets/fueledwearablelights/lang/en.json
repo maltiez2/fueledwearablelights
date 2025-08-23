@@ -2,9 +2,11 @@
   "game:tabname-fueledwearablelights": "Fueled wearable lights",
   "game:tabname-fueledwearablelights-colors": "Fueled wearable lights (Colored)",
 
+  "item-wearablelight-*-clayoillamp": "Head clay oil lamp",
   "item-wearablelight-*-oillamp": "Head oil lamp",
   "item-wearablelight-*-lantern": "Wearable pole lantern",
 
+  "itemdesc-wearablelight-*-clayoillamp": "Refueled by fat. Drag fat onto lamp item to refuel it.",
   "itemdesc-wearablelight-*-oillamp": "Refueled by fat. Drag fat onto lamp item to refuel it.",
   "itemdesc-wearablelight-*-lantern": "Refueled by cabndles. Drag a candle onto lantern item to refuel it.",
 
@@ -25,6 +27,7 @@
   "lining": "Lining",
 
   "setting-title-oillamp": "Head oil lamp",
+  "setting-title-clayoillamp": "Head clay oil lamp",
   "setting-title-lantern": "Pole lantern",
 
   "setting-oillamp_fuel_capacity": "Fuel capacity",
@@ -32,6 +35,9 @@
   "setting-oillamp_light_output": "Light output",
   "setting-oillamp_silver_lining_bonus": "Silver lining bonus",
   "setting-oillamp_gold_lining_bonus": "Gold lining bonus",
+  "setting-clayoillamp_fuel_capacity": "Fuel capacity",
+  "setting-clayoillamp_fuel_efficiency": "Fuel efficiency",
+  "setting-clayoillamp_light_output": "Light output",
   "setting-lantern_fuel_capacity": "Fuel capacity",
   "setting-lantern_fuel_efficiency": "Fuel efficiency",
   "setting-lantern_light_output": "Light output",

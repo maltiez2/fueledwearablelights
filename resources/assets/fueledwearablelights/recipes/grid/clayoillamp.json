@@ -1,0 +1,41 @@
+[
+	{
+		"enabled": true,
+		"ingredientPattern": "LNL,_L_",
+		"recipeGroup": 1,
+		"ingredients": {
+			"N": {"type": "block", "code": "game:bowl-blue-fired", "quantity": 1 },
+			"L": { "type": "item", "code": "game:rope" }
+		},
+		"width": 3,
+		"height": 2,
+		"name": "head-oil-lamp",
+		"output": { "type": "item", "code": "wearablelight-head-plain-clayoillamp"  }
+	},
+	{
+		"enabled": true,
+		"ingredientPattern": "LNL,_L_",
+		"recipeGroup": 2,
+		"ingredients": {
+			"N": {"type": "block", "code": "game:bowl-{color}-fired", "quantity": 1 },
+			"L": { "type": "item", "code": "game:rope" }
+		},
+		"width": 3,
+		"height": 2,
+		"name": "head-oil-lamp",
+		"output": { "type": "item", "code": "wearablelight-head-plain-clayoillamp", "attributes": {"types": {"rope": "reedrope", "clay": "{color}"}}  }
+	},
+	{
+		"enabled": true,
+		"ingredientPattern": "LNL,_L_",
+		"recipeGroup": 2,
+		"ingredients": {
+			"N": {"type": "block", "code": "game:bowl-{color}-fired", "quantity": 1 },
+			"L": { "type": "item", "code": "game:flaxtwine" }
+		},
+		"width": 3,
+		"height": 2,
+		"name": "head-oil-lamp",
+		"output": { "type": "item", "code": "wearablelight-head-plain-clayoillamp", "attributes": {"types": {"rope": "linen", "clay": "{color}"}}  }
+	}
+]

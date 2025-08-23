@@ -75,11 +75,11 @@
     "FuelAttribute": "oilLampFuel",
     "ConsumeFuelWhileSleeping": false,
     "ToggleAttribute": "state",
-    "LightHsv": [9, 6, 4],
+    "LightHsv": [9, 6, 6],
     "TurnedOffLightHsv": [0, 0, 0],
     "FuelItems": {"game:fat": 8, "game:fat-cut": 2},
     "MaxFuelWasteFraction": 0.5,
-    "LightHsvByVariant": {"silver": [9, 6, 6], "gold": [9, 6, 8]},
+    "LightHsvByVariant": {"silver": [9, 6, 8], "gold": [9, 6, 10]},
     "LightHsvVariantCode": "lining"
   },
   "creativeinventory": {"general": ["*"], "fueledwearablelights": ["*"]},
