@@ -21,6 +21,7 @@
   <!-- Dependencies -->
   <ItemGroup>
     <Dependencies Include="overhaullib" Version="*" />
+    <Dependencies Include="attributerenderinglibrary" Version="*" />
   </ItemGroup>
 
   <!-- Project settings -->
