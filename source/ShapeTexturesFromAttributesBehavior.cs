@@ -20,6 +20,7 @@ public class ShapeTexturesFromAttributes : CollectibleBehavior, IContainedMeshSo
     public Dictionary<string, string> CategoryCodeByType { get; protected set; } = new();
     public Dictionary<string, string[]> DisableElementsByType { get; protected set; } = new();
     public Dictionary<string, string[]> KeepElementsByType { get; protected set; } = new();
+    public bool AddOverlayPrefix { get; protected set; } = true;
 
     Dictionary<string, CompositeShape> IShapeTexturesFromAttributes.shapeByType => ShapeByType;
     Dictionary<string, Dictionary<string, CompositeTexture>> IShapeTexturesFromAttributes.texturesByType => TexturesByType;
@@ -53,6 +54,7 @@ public class ShapeTexturesFromAttributes : CollectibleBehavior, IContainedMeshSo
             CategoryCodeByType = properties["categoryCode"].AsObject<Dictionary<string, string>>();
             DisableElementsByType = properties["disableElements"].AsObject<Dictionary<string, string[]>>();
             KeepElementsByType = properties["keepElements"].AsObject<Dictionary<string, string[]>>();
+            AddOverlayPrefix = properties["addOverlayPrefix"].AsBool(true);
         }
     }
 
@@ -138,7 +140,7 @@ public class ShapeTexturesFromAttributes : CollectibleBehavior, IContainedMeshSo
         if (rcshape.Overlays != null && rcshape.Overlays.Length > 0)
         {
             overlayPrefix = GetMeshCacheKey(itemstack);
-            prefixedTextureCodes = ShapeOverlayHelper.AddOverlays(_clientApi, overlayPrefix, variants, stexSource, shape, rcshape);
+            prefixedTextureCodes = ShapeOverlayHelper.AddOverlays(_clientApi, AddOverlayPrefix ? overlayPrefix : "", variants, stexSource, shape, rcshape);
         }
 
         foreach ((string textureCode, CompositeTexture texture) in itemstack.Item.Textures)

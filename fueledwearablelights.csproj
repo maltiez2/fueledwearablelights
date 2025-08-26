@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ModName>Fueled Wearable Light</ModName>
     <ModType>code</ModType>
-    <ModVersion>0.3.1</ModVersion>
+    <ModVersion>0.4.0</ModVersion>
     <ModId>fueledwearablelights</ModId>
     <Description></Description>
     <Side>universal</Side>
