@@ -32,7 +32,7 @@
   ],
   "attributes": {
     "wearableAttachment": true,
-    "clothescategory": "head",
+    "clothescategory": "headgear",
     "warmth": 0,
     "NeedsFuel": true,
     "FuelCapacityHours": 12,

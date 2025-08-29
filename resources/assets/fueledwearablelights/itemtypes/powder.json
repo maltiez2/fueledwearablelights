@@ -1,0 +1,33 @@
+﻿{
+  "code": "powder",
+  "variantgroups": [{"code": "type", "states": ["coke", "cokelimemix", "calciumcarbide"]}],
+  "behaviors": [{"name": "GroundStorable", "properties": {"layout": "Messy12", "collisionBox": {"x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.125, "z2": 1}}}],
+  "heldTpIdleAnimation": "holdbothhands",
+  "heldRightReadyAnimation": "holdbothhands",
+  "shape": {"base": "game:item/food/flour"},
+  "textureByType": {"*-coke": {"base": "game:item/resource/crushed/charcoal"}, "*": {"base": "game:item/resource/crushed/lime"}},
+  "creativeinventory": {"general": ["*"], "fueledwearablelights": ["*"]},
+  "attributes": {
+    "dissolveInWater": true,
+    "displaycaseable": true,
+    "shelvable": true,
+    "onDisplayTransform": {"translation": {"x": 0.05, "y": 0, "z": 0}, "origin": {"x": 0.5, "y": 0, "z": 0.5}, "scale": 0.65},
+    "groundStorageTransform": {"translation": {"x": 0, "y": -0.06, "z": 0}, "scale": 0.89},
+    "handbook": {"groupBy": ["powder-*"]}
+  },
+  "combustiblePropsByType": {
+    "*-cokelimemix": {
+      "meltingPoint": 1000,
+      "meltingDuration": 13,
+      "smeltedRatio": 1,
+      "requiresContainer": false,
+      "smeltedStack": {"type": "item", "code": "powder-calciumcarbide", "stacksize": 1}
+    }
+  },
+  "maxstacksize": 64,
+  "materialDensity": 500,
+  "guiTransform": {"translation": {"x": 0, "y": 0, "z": 0}, "rotation": {"x": 149, "y": 12, "z": 0}, "origin": {"x": 0.41, "y": -0.1, "z": 0.8}, "scale": 2.54},
+  "fpHandTransform": {"rotation": {"x": 54, "y": 95, "z": -31}, "scale": 1.34},
+  "tpHandTransform": {"translation": {"x": -1.87, "y": -1.25, "z": -0.8}, "rotation": {"x": 70, "y": 11, "z": -65}, "scale": 0.41},
+  "groundTransform": {"translation": {"x": 0, "y": 0.2, "z": 0}, "rotation": {"x": -4, "y": 8, "z": 0}, "origin": {"x": 0.5, "y": 0.5, "z": 0.5299}, "scale": 1.92}
+}

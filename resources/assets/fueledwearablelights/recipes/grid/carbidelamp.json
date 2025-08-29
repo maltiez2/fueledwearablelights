@@ -6,12 +6,12 @@
 		"ingredients": {
 			"N": { "type": "item", "code": "part-oillamp-brass", "quantity": 1 },
 			"L": { "type": "item", "code": "game:leather-normal-plain" },
-			"F": { "type": "item", "code": "game:fat", "isTool": true, "toolDurabilityCost": 0}
+			"F": { "type": "item", "code": "powder-calciumcarbide", "isTool": true, "toolDurabilityCost": 0}
 		},
 		"width": 3,
 		"height": 2,
-		"name": "head-oil-lamp",
-		"output": { "type": "item", "code": "wearablelight-head-plain-oillamp" }
+		"name": "head-carbidelamp-lamp",
+		"output": { "type": "item", "code": "wearablelight-head-plain-carbidelamp" }
 	},
 	{
 		"enabled": true,
@@ -20,12 +20,12 @@
 		"ingredients": {
 			"N": {"type": "item", "code": "part-oillamp-{metal}", "quantity": 1 },
 			"L": { "type": "item", "code": "game:leather-normal-{leather}" },
-			"F": { "type": "item", "code": "game:fat", "isTool": true, "toolDurabilityCost": 0}
+			"F": { "type": "item", "code": "powder-calciumcarbide", "isTool": true, "toolDurabilityCost": 0}
 		},
 		"width": 3,
 		"height": 2,
-		"name": "head-oil-lamp",
-		"output": { "type": "item", "code": "wearablelight-head-plain-oillamp", "attributes": {"types": {"leather": "{leather}", "metal": "{metal}"}} }
+		"name": "head-carbidelamp-lamp",
+		"output": { "type": "item", "code": "wearablelight-head-plain-carbidelamp", "attributes": {"types": {"leather": "{leather}", "metal": "{metal}"}} }
 	},
 	{
 		"enabled": true,
@@ -35,12 +35,12 @@
 			"N": {"type": "item", "code": "part-oillamp-{metal}", "quantity": 1 },
 			"L": { "type": "item", "code": "game:leather-normal-{leather}" },
 			"P": { "type": "item", "code": "game:metalplate-silver" },
-			"F": { "type": "item", "code": "game:fat", "isTool": true, "toolDurabilityCost": 0}
+			"F": { "type": "item", "code": "powder-calciumcarbide", "isTool": true, "toolDurabilityCost": 0}
 		},
 		"width": 3,
 		"height": 2,
-		"name": "head-oil-lamp",
-		"output": { "type": "item", "code": "wearablelight-head-plain-oillamp", "attributes": {"types": {"leather": "{leather}", "metal": "{metal}", "lining": "silver"}} }
+		"name": "head-carbidelamp-lamp",
+		"output": { "type": "item", "code": "wearablelight-head-plain-carbidelamp", "attributes": {"types": {"leather": "{leather}", "metal": "{metal}", "lining": "silver"}} }
 	},
 	{
 		"enabled": true,
@@ -50,11 +50,11 @@
 			"N": {"type": "item", "code": "part-oillamp-{metal}", "quantity": 1 },
 			"L": { "type": "item", "code": "game:leather-normal-{leather}" },
 			"P": { "type": "item", "code": "game:metalplate-gold" },
-			"F": { "type": "item", "code": "game:fat", "isTool": true, "toolDurabilityCost": 0}
+			"F": { "type": "item", "code": "powder-calciumcarbide", "isTool": true, "toolDurabilityCost": 0}
 		},
 		"width": 3,
 		"height": 2,
-		"name": "head-oil-lamp",
-		"output": { "type": "item", "code": "wearablelight-head-plain-oillamp", "attributes": {"types": {"leather": "{leather}", "metal": "{metal}", "lining": "gold"}} }
+		"name": "head-carbidelamp-lamp",
+		"output": { "type": "item", "code": "wearablelight-head-plain-carbidelamp", "attributes": {"types": {"leather": "{leather}", "metal": "{metal}", "lining": "gold"}} }
 	}
 ]

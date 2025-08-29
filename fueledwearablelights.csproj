@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ModName>Fueled Wearable Light</ModName>
     <ModType>code</ModType>
-    <ModVersion>0.4.0</ModVersion>
+    <ModVersion>1.0.0</ModVersion>
     <ModId>fueledwearablelights</ModId>
     <Description></Description>
     <Side>universal</Side>
@@ -15,8 +15,6 @@
   <ItemGroup>
     <ModInfoAuthors Include="Maltiez" />
   </ItemGroup>
-
-  <!-- Translators -->
 
   <!-- Dependencies -->
   <ItemGroup>

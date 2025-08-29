@@ -4,13 +4,25 @@
 
   "item-wearablelight-*-clayoillamp": "Head clay oil lamp",
   "item-wearablelight-*-oillamp": "Head oil lamp",
+  "item-wearablelight-*-candlelamp": "Head candle lamp",
+  "item-wearablelight-*-carbidelamp": "Head carbide lamp",
   "item-wearablelight-*-lantern": "Wearable pole lantern",
 
-  "itemdesc-wearablelight-*-clayoillamp": "Refueled by fat. Drag fat onto lamp item to refuel it.",
-  "itemdesc-wearablelight-*-oillamp": "Refueled by fat. Drag fat onto lamp item to refuel it.",
-  "itemdesc-wearablelight-*-lantern": "Refueled by cabndles. Drag a candle onto lantern item to refuel it.",
+  "itemdesc-wearablelight-*-clayoillamp": "Refueled by fat. Drag fuel onto lamp item to refuel it.",
+  "itemdesc-wearablelight-*-oillamp": "Refueled by fat. Drag fuel onto lamp item to refuel it.",
+  "itemdesc-wearablelight-*-candlelamp": "Refueled by candles. Drag fuel onto lamp item to refuel it.",
+  "itemdesc-wearablelight-*-carbidelamp": "Refueled by calcium carbide. Drag fuel onto lamp item to refuel it.",
+  "itemdesc-wearablelight-*-lantern": "Refueled by cabndles. Drag fuel onto lantern item to refuel it.",
 
-  "item-part-oillamp-*": "Oil lamp parts",
+  "item-part-oillamp-*": "Lamp parts",
+
+  "item-powder-coke": "Coke powder",
+  "item-powder-cokelimemix": "Lime and coke mix",
+  "item-powder-calciumcarbide": "Calcium carbide",
+
+  "itemdesc-powder-coke": "Used in production of calcium carbide.",
+  "itemdesc-powder-cokelimemix": "Used in production of calcium carbide",
+  "itemdesc-powder-calciumcarbide": "When mixed with water produces flameable acetylene gas. Used as fuel in carbide lamps.",
 
   "color-orange": "Orange",
   "color-black": "Black",
@@ -27,20 +39,26 @@
   "lining": "Lining",
 
   "setting-title-oillamp": "Head oil lamp",
+  "setting-title-candlelamp": "Head candle lamp",
+  "setting-title-carbidelamp": "Head carbide lamp",
   "setting-title-clayoillamp": "Head clay oil lamp",
-  "setting-title-lantern": "Pole lantern",
 
   "setting-oillamp_fuel_capacity": "Fuel capacity",
   "setting-oillamp_fuel_efficiency": "Fuel efficiency",
   "setting-oillamp_light_output": "Light output",
   "setting-oillamp_silver_lining_bonus": "Silver lining bonus",
   "setting-oillamp_gold_lining_bonus": "Gold lining bonus",
+  "setting-candlelamp_fuel_capacity": "Fuel capacity",
+  "setting-candlelamp_fuel_efficiency": "Fuel efficiency",
+  "setting-candlelamp_light_output": "Light output",
+  "setting-candlelamp_silver_lining_bonus": "Silver lining bonus",
+  "setting-candlelamp_gold_lining_bonus": "Gold lining bonus",
+  "setting-carbidelamp_fuel_capacity": "Fuel capacity",
+  "setting-carbidelamp_fuel_efficiency": "Fuel efficiency",
+  "setting-carbidelamp_light_output": "Light output",
+  "setting-carbidelamp_silver_lining_bonus": "Silver lining bonus",
+  "setting-carbidelamp_gold_lining_bonus": "Gold lining bonus",
   "setting-clayoillamp_fuel_capacity": "Fuel capacity",
   "setting-clayoillamp_fuel_efficiency": "Fuel efficiency",
-  "setting-clayoillamp_light_output": "Light output",
-  "setting-lantern_fuel_capacity": "Fuel capacity",
-  "setting-lantern_fuel_efficiency": "Fuel efficiency",
-  "setting-lantern_light_output": "Light output",
-  "setting-lantern_silver_lining_bonus": "Silver lining bonus",
-  "setting-lantern_gold_lining_bonus": "Gold lining bonus"
+  "setting-clayoillamp_light_output": "Light output"
 }

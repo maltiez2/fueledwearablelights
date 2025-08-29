@@ -1,0 +1,9 @@
+﻿[
+  {
+    "side": "Server",
+    "op": "add",
+    "file": "game:itemtypes/resource/coke.json",
+    "path": "/grindingProps",
+    "value": {"groundStack": {"type": "item", "code": "fueledwearablelights:powder-coke"}}
+  }
+]

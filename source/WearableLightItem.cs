@@ -20,6 +20,7 @@ public class WearableFueledLightSource : Item, IWearableLightSource, IFueledItem
 {
     public virtual string HotKeyCode => "toggleWearableLight";
     public WearableFueledLightSourceExntendedStats Stats { get; set; } = new();
+    public Dictionary<string, float> FuelItems { get; protected set; } = [];
 
     public override void OnLoaded(ICoreAPI api)
     {
@@ -44,6 +45,14 @@ public class WearableFueledLightSource : Item, IWearableLightSource, IFueledItem
             HotKeyCodes = [HotKeyCode],
             MouseButton = EnumMouseButton.None
         };
+
+        foreach ((string wildcard, float fuel) in Stats.FuelItems)
+        {
+            foreach (Item item in api.World.Items.Where(item => WildcardUtil.Match(wildcard, item.Code?.ToString() ?? "")))
+            {
+                FuelItems.Add(GetHeldItemName(item), fuel);
+            }
+        }
     }
     public override int GetMergableQuantity(ItemStack sinkStack, ItemStack sourceStack, EnumMergePriority priority)
     {
@@ -80,21 +89,24 @@ public class WearableFueledLightSource : Item, IWearableLightSource, IFueledItem
     }
     public override void GetHeldItemInfo(ItemSlot inSlot, StringBuilder dsc, IWorldAccessor world, bool withDebugInfo)
     {
-        base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
-
         if (Stats.NeedsFuel)
         {
             double fuelHours = GetFuelHours((world as IClientWorldAccessor)?.Player, inSlot);
-            dsc.AppendLine(Lang.Get("Has fuel for {0:0.#} hours", fuelHours));
-            if (fuelHours <= 0.0)
+            dsc.AppendLine($"Has fuel for {fuelHours:0.#}/{Stats.FuelCapacityHours:0.#} hours");
+            dsc.AppendLine($"Light output: {GetMaxLightHsv(inSlot)[2]}");
+            dsc.AppendLine($"Fuel items:");
+            foreach ((string name, float fuel) in FuelItems)
             {
-                dsc.AppendLine(Lang.Get("Add fuel to refuel"));
+                dsc.AppendLine($" - {name} \t: {fuel:0.#} hours");
             }
-
             dsc.AppendLine();
         }
 
         dsc.AppendLine();
+
+        base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
+
+        
     }
     public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling)
     {
@@ -151,6 +163,29 @@ public class WearableFueledLightSource : Item, IWearableLightSource, IFueledItem
         }
 
         return TurnedOn(player.Player, slot) && Stats.NeedsFuel ? result : Stats.TurnedOffLightHsv;
+    }
+    public virtual byte[] GetMaxLightHsv(ItemSlot slot)
+    {
+        byte[] result = Stats.LightHsv;
+
+        Variants variants = Variants.FromStack(slot.Itemstack);
+        string? variant = variants.Get(Stats.LightHsvVariantCode);
+        if (variant != null && Stats.LightHsvByVariant.ContainsKey(variant))
+        {
+            result = Stats.LightHsvByVariant[variant];
+        }
+
+        if (slot.Itemstack?.Attributes?.HasAttribute("lighthsv") == true)
+        {
+            result = slot.Itemstack.Attributes
+                .GetString("lighthsv")
+                .Split('-')
+                .Select(int.Parse)
+                .Select(i => (byte)i)
+                .ToArray();
+        }
+
+        return result;
     }
     public virtual float GetStackFuel(ItemStack stack)
     {
@@ -223,4 +258,12 @@ public class WearableFueledLightSource : Item, IWearableLightSource, IFueledItem
 
     private WorldInteraction? _clickToToggle;
     private WorldInteraction? _hotkeyToToggle;
+
+    private string GetHeldItemName(Item item)
+    {
+        string text = item.ItemClass.Name();
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.Append(Lang.GetMatching(item.Code?.Domain + ":" + text + "-" + item.Code?.Path));
+        return stringBuilder.ToString();
+    }
 }

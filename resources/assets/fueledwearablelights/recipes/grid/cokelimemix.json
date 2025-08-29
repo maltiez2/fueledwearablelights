@@ -1,0 +1,15 @@
+[
+  {
+		"enabled": true,
+		"ingredientPattern": "CL",
+		"recipeGroup": 1,
+		"ingredients": {
+			"C": { "type": "item", "code": "fueledwearablelights:powder-coke" },
+			"L": { "type": "item", "code": "game:lime" }
+		},
+		"width": 2,
+		"height": 1,
+		"name": "coke-lime-mix",
+		"output": { "type": "item", "code": "fueledwearablelights:powder-cokelimemix" }
+	}
+]
