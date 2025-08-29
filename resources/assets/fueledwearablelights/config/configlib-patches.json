@@ -7,7 +7,7 @@
         "attributesByType/*-oillamp/FuelEfficiency": "oillamp_fuel_efficiency",
         "attributesByType/*-oillamp/LightHsv/2": "oillamp_light_output",
         "attributesByType/*-oillamp/LightHsvByVariant/silver/2": "clamp(oillamp_light_output + oillamp_silver_lining_bonus, 0, 32)",
-        "attributesByType/*-oillamp/LightHsvByVariant/gold/2": "clamp(oillamp_light_output + oillamp_gold_lining_bonus",
+        "attributesByType/*-oillamp/LightHsvByVariant/gold/2": "clamp(oillamp_light_output + oillamp_gold_lining_bonus, 0, 32)",
         "attributesByType/*-candlelamp/FuelCapacityHours": "candlelamp_fuel_capacity",
         "attributesByType/*-candlelamp/FuelEfficiency": "candlelamp_fuel_efficiency",
         "attributesByType/*-candlelamp/LightHsv/2": "candlelamp_light_output",

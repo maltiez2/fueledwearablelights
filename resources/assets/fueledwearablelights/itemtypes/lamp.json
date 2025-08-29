@@ -42,6 +42,20 @@
             "-",
             "<br>"
           ],
+          "lining-*": [
+            "game:waypoint-color",
+            ": ",
+            "-",
+            "<br>",
+            "game:blockmaterial-Metal",
+            ": ",
+            "game:material-brass",
+            "<br>",
+            "fueledwearablelights:lining",
+            ": ",
+            "game:material-{lining}",
+            "<br>"
+          ],
           "*": ["game:waypoint-color", ": ", "-", "<br>", "game:blockmaterial-Metal", ": ", "game:material-brass", "<br>", "fueledwearablelights:lining", ": ", "-"]
         },
         "textures": {
@@ -121,12 +135,19 @@
       "handbook": {"groupBy": ["wearablelight-{category}-{subtype}-{type}"]}
     }
   },
-  "creativeinventory": {"general": ["*"], "fueledwearablelights": ["*"]},
+  "creativeinventory": {"general": ["*"]},
   "creativeinventoryStacks": [
+    {
+      "tabs": ["general", "fueledwearablelights"],
+      "stacks": [
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}"},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"lining": "silver"}}},
+        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"lining": "gold"}}}
+      ]
+    },
     {
       "tabs": ["general", "fueledwearablelights-colors"],
       "stacks": [
-        {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}"},
         {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "plain", "metal": "brass"}}},
         {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "plain", "metal": "brass", "lining": "silver"}}},
         {"type": "item", "code": "wearablelight-{category}-{subtype}-{type}", "attributes": {"types": {"leather": "plain", "metal": "brass", "lining": "gold"}}},

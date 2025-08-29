@@ -56,5 +56,37 @@
 		"height": 2,
 		"name": "head-carbidelamp-lamp",
 		"output": { "type": "item", "code": "wearablelight-head-plain-carbidelamp", "attributes": {"types": {"leather": "{leather}", "metal": "{metal}", "lining": "gold"}} }
+	},
+	{
+		"enabled": true,
+		"ingredientPattern": "LP",
+		"recipeGroup": 3,
+		"ingredients": {
+			"L": {"type": "item", "code": "wearablelight-head-plain-carbidelamp" },
+			"P": { "type": "item", "code": "game:metalplate-silver" }
+		},
+		"width": 2,
+		"height": 1,
+		"mergeAttributesFrom": [
+			"L"
+		],
+		"name": "head-candle-lamp",
+		"output": { "type": "item", "code": "wearablelight-head-plain-carbidelamp", "attributes": {"types": {"lining": "silver"}}}
+	},
+	{
+		"enabled": true,
+		"ingredientPattern": "LP",
+		"recipeGroup": 3,
+		"ingredients": {
+			"L": {"type": "item", "code": "wearablelight-head-plain-carbidelamp" },
+			"P": { "type": "item", "code": "game:metalplate-gold" }
+		},
+		"width": 2,
+		"height": 1,
+		"mergeAttributesFrom": [
+			"L"
+		],
+		"name": "head-candle-lamp",
+		"output": { "type": "item", "code": "wearablelight-head-plain-carbidelamp", "attributes": {"types": {"lining": "gold"}}}
 	}
 ]
