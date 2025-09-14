@@ -133,6 +133,13 @@ public class WearableFueledLightSource : Item, IWearableLightSource, IFueledItem
 
         slot.Itemstack.Attributes.SetDouble("fuelHours", Math.Max(0.0, hours + GetFuelHours(player, slot)));
         slot.OnItemSlotModified(sinkStack: null);
+
+        if (GetFuelHours(player, slot) <= 0)
+        {
+            TurnOff(player, slot);
+        }
+
+        slot.MarkDirty();
     }
     public virtual double GetFuelHours(IPlayer player, ItemSlot slot)
     {
