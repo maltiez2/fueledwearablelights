@@ -2,22 +2,33 @@
   "version": 1,
   "patches": {
     "number": {
-      "fueledwearablelights:itemtypes/lamp.jspn": {
+      "fueledwearablelights:itemtypes/lamp.json": {
         "attributesByType/*-oillamp/FuelCapacityHours": "oillamp_fuel_capacity",
         "attributesByType/*-oillamp/FuelEfficiency": "oillamp_fuel_efficiency",
+        "attributesByType/*-candlelamp/FuelCapacityHours": "candlelamp_fuel_capacity",
+        "attributesByType/*-candlelamp/FuelEfficiency": "candlelamp_fuel_efficiency",
+        "attributesByType/*-carbidelamp/FuelCapacityHours": "carbidelamp_fuel_capacity",
+        "attributesByType/*-carbidelamp/FuelEfficiency": "carbidelamp_fuel_efficiency"
+      },
+      "fueledwearablelights:itemtypes/clayoillamp.json": {
+        "attributes/FuelCapacityHours": "clayoillamp_fuel_capacity",
+        "attributes/FuelEfficiency": "clayoillamp_fuel_efficiency"
+      }
+    },
+    "integer": {
+      "fueledwearablelights:itemtypes/lamp.json": {
         "attributesByType/*-oillamp/LightHsv/2": "oillamp_light_output",
         "attributesByType/*-oillamp/LightHsvByVariant/silver/2": "clamp(oillamp_light_output + oillamp_silver_lining_bonus, 0, 32)",
         "attributesByType/*-oillamp/LightHsvByVariant/gold/2": "clamp(oillamp_light_output + oillamp_gold_lining_bonus, 0, 32)",
-        "attributesByType/*-candlelamp/FuelCapacityHours": "candlelamp_fuel_capacity",
-        "attributesByType/*-candlelamp/FuelEfficiency": "candlelamp_fuel_efficiency",
         "attributesByType/*-candlelamp/LightHsv/2": "candlelamp_light_output",
         "attributesByType/*-candlelamp/LightHsvByVariant/silver/2": "clamp(candlelamp_light_output + candlelamp_silver_lining_bonus, 0, 32)",
         "attributesByType/*-candlelamp/LightHsvByVariant/gold/2": "clamp(candlelamp_light_output + candlelamp_gold_lining_bonus, 0, 32)",
-        "attributesByType/*-carbidelamp/FuelCapacityHours": "carbidelamp_fuel_capacity",
-        "attributesByType/*-carbidelamp/FuelEfficiency": "carbidelamp_fuel_efficiency",
         "attributesByType/*-carbidelamp/LightHsv/2": "carbidelamp_light_output",
         "attributesByType/*-carbidelamp/LightHsvByVariant/silver/2": "clamp(carbidelamp_light_output + carbidelamp_silver_lining_bonus, 0, 32)",
         "attributesByType/*-carbidelamp/LightHsvByVariant/gold/2": "clamp(carbidelamp_light_output + carbidelamp_gold_lining_bonus, 0, 32)"
+      },
+      "fueledwearablelights:itemtypes/clayoillamp.json": {
+        "attributes/LightHsv/2": "clayoillamp_light_output"
       }
     }
   },

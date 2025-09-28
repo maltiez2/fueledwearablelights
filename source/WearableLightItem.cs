@@ -1,12 +1,14 @@
 ﻿using AttributeRenderingLibrary;
 using CombatOverhaul;
 using CombatOverhaul.Utils;
+using System.Diagnostics;
 using System.Text;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
+using VSImGui.Debug;
 
 namespace FueledWearableLights;
 
@@ -105,8 +107,6 @@ public class WearableFueledLightSource : Item, IWearableLightSource, IFueledItem
         dsc.AppendLine();
 
         base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
-
-        
     }
     public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling)
     {
@@ -148,8 +148,15 @@ public class WearableFueledLightSource : Item, IWearableLightSource, IFueledItem
         return Math.Max(0.0, slot.Itemstack.Attributes.GetDecimal("fuelHours"));
     }
     public virtual bool ConsumeFuelWhenSleeping(IPlayer player, ItemSlot slot) => Stats.ConsumeFuelWhileSleeping;
+
     public virtual byte[] GetLightHsv(EntityPlayer player, ItemSlot slot)
     {
+        /*DebugWidgets.IntSlider("test", "test", "H", 0, 63, () => h, value => h = value);
+        DebugWidgets.IntSlider("test", "test", "S", 0, 7, () => s, value => s = value);
+        DebugWidgets.IntSlider("test", "test", "V", 0, 31, () => v, value => v = value);
+
+        return [(byte)h, (byte)s, (byte)v];*/
+        
         byte[] result = Stats.LightHsv;
 
         Variants variants = Variants.FromStack(slot.Itemstack);
