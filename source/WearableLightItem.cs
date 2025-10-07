@@ -108,6 +108,15 @@ public class WearableFueledLightSource : Item, IWearableLightSource, IFueledItem
 
         base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
     }
+    public override string GetHeldItemName(ItemStack itemStack)
+    {
+        string state = TurnedOn(itemStack) ? $" ({Lang.Get("On")})" : $" ({Lang.Get("Off")})";
+        if (itemStack != null && !itemStack.Attributes.HasAttribute(Stats.ToggleAttribute))
+        {
+            state = "";
+        }
+        return base.GetHeldItemName(itemStack) + state;
+    }
     public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling)
     {
         if ((byEntity as EntityPlayer)?.Player is IPlayer player)
@@ -225,7 +234,8 @@ public class WearableFueledLightSource : Item, IWearableLightSource, IFueledItem
         slot.Itemstack.Attributes.SetDouble("fuelHours", fuelHours);
         slot.MarkDirty();
     }
-    public virtual bool TurnedOn(IPlayer player, ItemSlot slot) => slot?.Itemstack?.Attributes?.GetBool(Stats.ToggleAttribute) ?? false;
+    public virtual bool TurnedOn(IPlayer player, ItemSlot slot) => TurnedOn(slot.Itemstack);
+    public virtual bool TurnedOn(ItemStack? stack) => stack?.Attributes?.GetBool(Stats.ToggleAttribute) ?? false;
     public virtual void TurnOn(IPlayer player, ItemSlot slot)
     {
         if (GetFuelHours(player, slot) <= 0)
@@ -269,6 +279,8 @@ public class WearableFueledLightSource : Item, IWearableLightSource, IFueledItem
             TurnOn(player, slot);
         }
     }
+
+    
 
     private WorldInteraction? _clickToToggle;
     private WorldInteraction? _hotkeyToToggle;

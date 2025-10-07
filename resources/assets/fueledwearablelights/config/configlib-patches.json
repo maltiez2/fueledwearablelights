@@ -5,14 +5,18 @@
       "fueledwearablelights:itemtypes/lamp.json": {
         "attributesByType/*-oillamp/FuelCapacityHours": "oillamp_fuel_capacity",
         "attributesByType/*-oillamp/FuelEfficiency": "oillamp_fuel_efficiency",
+        "attributesByType/*-oillamp/MaxFuelWasteFraction": "oillamp_max_fuel_waste_fraction",
         "attributesByType/*-candlelamp/FuelCapacityHours": "candlelamp_fuel_capacity",
         "attributesByType/*-candlelamp/FuelEfficiency": "candlelamp_fuel_efficiency",
+        "attributesByType/*-candlelamp/MaxFuelWasteFraction": "candlelamp_max_fuel_waste_fraction",
         "attributesByType/*-carbidelamp/FuelCapacityHours": "carbidelamp_fuel_capacity",
-        "attributesByType/*-carbidelamp/FuelEfficiency": "carbidelamp_fuel_efficiency"
+        "attributesByType/*-carbidelamp/FuelEfficiency": "carbidelamp_fuel_efficiency",
+        "attributesByType/*-carbidelamp/MaxFuelWasteFraction": "carbidelamp_max_fuel_waste_fraction"
       },
       "fueledwearablelights:itemtypes/clayoillamp.json": {
         "attributes/FuelCapacityHours": "clayoillamp_fuel_capacity",
-        "attributes/FuelEfficiency": "clayoillamp_fuel_efficiency"
+        "attributes/FuelEfficiency": "clayoillamp_fuel_efficiency",
+        "attributes/MaxFuelWasteFraction": "clayoillamp_max_fuel_waste_fraction"
       }
     },
     "integer": {
@@ -58,6 +62,17 @@
       }
     },
     {
+      "code": "clayoillamp_max_fuel_waste_fraction",
+      "type": "float",
+      "ingui": "setting-clayoillamp_max_fuel_waste_fraction",
+      "comment": "setting-comment-clayoillamp_max_fuel_waste_fraction",
+      "default": 0.5,
+      "range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
       "code": "clayoillamp_light_output",
       "type": "integer",
       "ingui": "setting-oillamp_light_output",
@@ -86,6 +101,17 @@
       "range": {
         "min": 0.0,
         "max": 4.0
+      }
+    },
+    {
+      "code": "oillamp_max_fuel_waste_fraction",
+      "type": "float",
+      "ingui": "setting-oillamp_max_fuel_waste_fraction",
+      "comment": "setting-comment-oillamp_max_fuel_waste_fraction",
+      "default": 0.5,
+      "range": {
+        "min": 0.0,
+        "max": 1.0
       }
     },
     {
@@ -140,6 +166,16 @@
       }
     },
     {
+      "code": "candlelamp_max_fuel_waste_fraction",
+      "type": "float",
+      "ingui": "setting-candlelamp_max_fuel_waste_fraction",
+      "default": 0.5,
+      "range": {
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
       "code": "candlelamp_light_output",
       "type": "integer",
       "ingui": "setting-candlelamp_light_output",
@@ -188,6 +224,16 @@
       "range": {
         "min": 0.0,
         "max": 4.0
+      }
+    },
+    {
+      "code": "carbidelamp_max_fuel_waste_fraction",
+      "type": "float",
+      "ingui": "setting-carbidelamp_max_fuel_waste_fraction",
+      "default": 0.5,
+      "range": {
+        "min": 0.0,
+        "max": 1.0
       }
     },
     {

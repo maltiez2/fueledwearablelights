@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ModName>Fueled Wearable Light</ModName>
     <ModType>code</ModType>
-    <ModVersion>1.0.3</ModVersion>
+    <ModVersion>1.0.5</ModVersion>
     <ModId>fueledwearablelights</ModId>
     <Description></Description>
     <Side>universal</Side>
@@ -18,7 +18,7 @@
 
   <!-- Dependencies -->
   <ItemGroup>
-    <Dependencies Include="overhaullib" Version="1.8.1" />
+    <Dependencies Include="overhaullib" Version="1.12.5" />
     <Dependencies Include="attributerenderinglibrary" Version="*" />
   </ItemGroup>
 
